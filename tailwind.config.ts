@@ -11,6 +11,12 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        skyBg : "#C3EBFA",
+        skyLightBlueBg: "#EDF9FD",
+        purpleBg : "#CFCEFF",
+        pupleLightBg : '#F1F0FF',
+        yelloWBg : "#FAE27C",
+        yellowLightBg : "#FEFCE8"
       },
     },
   },
