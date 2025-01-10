@@ -2,6 +2,8 @@
 import React from "react";
 import UserCard from "@/app/components/UserCard";
 import CountChart from "@/app/components/CountChart";
+import AttendantChart from "@/app/components/AttendantChart";
+import FinanceChart from "@/app/components/FinanceChart";
 const Adminpage = () => {
   return (
     <div className="p-4 flex gap-4  flex-col md:flex-row">
@@ -16,14 +18,20 @@ const Adminpage = () => {
           <UserCard typeRole="staff" age="2" />
         </div>
         {/* middle chart */}
-        <div className="flex gap-4 flex-col lg: flex-row">
+        <div className="flex gap-4 flex-col lg:flex-row">
           <div className="w-full lg:w-1/3 h-[450px]">
             <CountChart />
           </div>
-          <div className="w-full lg:w-2/3 h-[450px]"></div>
+          {/* attendance chart */}
+          <div className="w-full lg:w-2/3 h-[450px]">
+            <AttendantChart />
+          </div>
         </div>
         {/* end of middle chart */}
-        <div className=""></div>
+        {/* bottom chaert */}
+        <div className="w-full h-[500px]">
+          <FinanceChart />
+        </div>
       </div>
       {/* right side */}
       <div className="w-full lg:w-1/3">Right</div>

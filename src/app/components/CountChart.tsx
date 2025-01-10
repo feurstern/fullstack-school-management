@@ -24,17 +24,14 @@ const CountChart = () => {
       <h1 className="text-lg font-semi-bold">Students</h1>
       <Image alt="more dark" src="/moreDark.png" width={20} height={20} />
       {/* chart */}
-      <div className="">
-        {dataCountChart.map((x) => (
-          <div key={x.name}>{x.name}</div>
-        ))}
+      <div className="relative w-full h-[75%]">
         <ResponsiveContainer className="w-full h-[75%]">
           <RadialBarChart
             cx="50%"
             cy="50%"
-            innerRadius="10%"
-            outerRadius="80%"
-            barSize={10}
+            innerRadius="40%"
+            outerRadius="100%"
+            barSize={32}
             data={dataCountChart}
           >
             <RadialBar
@@ -50,6 +47,13 @@ const CountChart = () => {
             />
           </RadialBarChart>
         </ResponsiveContainer>
+        <Image
+        alt="male female comparison"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          src="/maleFemale.png"
+          width={50}
+          height={50}
+        />
       </div>
       {/* end of chart */}
 
